@@ -47,7 +47,7 @@ let student = {
 }
 
 let studentWithVCC = {
-    ...student,
+    ...student,//refer to the studnet object
     college: "VCC",
     address: "Vancouver"
 }

@@ -1,0 +1,68 @@
+// callback
+
+function greeting(firstName, lastName){
+    console.log(`Hey ${firstName} ${lastName}`);
+}
+
+//greeting("Hison", "Lin");
+
+//Starting a new job today
+function jobStarts(callback){//callback is a function which is passed as a parameter, which will be called later in jobstarts
+    let firstName = prompt("Please enter your first Name");//prompt can only check in browser
+    let lastName = prompt("Please enter your last Name");
+    callback(firstName, lastName);
+}
+
+//jobStarts(greeting);
+
+//setTimout
+
+setTimeout(() => {
+
+},2000);//2 second
+
+//Filter
+let array = [1, -10, 20, -100, 5, 40];
+
+let positiveNumber = array.filter((item) => {
+    if(item > 0){
+        return true;
+    }
+})
+
+console.log(positiveNumber);//[1, 20, 5, 40]
+
+//Create a promise
+let num = -100;
+let promise = new Promise((resolve, reject)=>{
+    if (num > 0){
+        resolve({
+            data: num,
+            message: "positive!"
+        });
+    }
+    else{
+        reject({
+            data: num,
+            message: "negative!"
+        });
+    }
+})
+
+promise.then((response)=>{
+    console.log(response.message)//if resolve
+}).catch((error)=>{
+    console.log(error.message)//if reject
+}).finally((value)=>{
+console.log("Value", value)//always executed
+})
+
+//I can write the aboive code as using asyno await
+async function checkNumber(){
+    let output = await promise;
+
+    console.log(output);
+    return output;
+}
+let output = await checkNumber();
+console.log(output);
