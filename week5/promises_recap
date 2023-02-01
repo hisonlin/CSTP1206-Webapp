@@ -57,7 +57,7 @@ promise.then((response)=>{
 console.log("Value", value)//always executed
 })
 
-//I can write the aboive code as using asyno await
+//I can write the aboive code as using async await
 async function checkNumber(){
     let output = await promise;
 
