@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+#search{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616__480.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#search div input{
+    padding: 10px;
+    width: 400px;
+    border: none;
+    border-radius: 10px;
+}
+
+#search div button{
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+#photo{
+    background-color: rgb(243, 242, 242);
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+#photo div img{
+    width: 100%;
+}
+
